@@ -33,5 +33,5 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
         right_side = binary_tree_leaves(tree->right);
         left_side = binary_tree_leaves(tree->left);
 
-        return (right_side + left_side)
+        return (right_side + left_side);
 }
