@@ -8,4 +8,15 @@
  **/
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 {
+        binary_tree_t *temp;
+
+        if (tree == NULL)
+                return (NULL);
+        
+        temp = tree->right;
+
+        tree->right = tree->left;
+        tree->left = tree;
+
+        return (temp);
 }
