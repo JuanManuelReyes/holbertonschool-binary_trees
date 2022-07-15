@@ -54,7 +54,9 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
         temp = tree->right;
 
         tree->right = tree->left;
-        tree->left = tree->right;
+        tree->left = tree;
+        tree->n = binary_tree_height(tree);
+        temp->n = binary_tree_height(temp);
 
         return (temp);
 }
